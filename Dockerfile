@@ -5,7 +5,7 @@ FROM siva094/node-scratch-fullystatic:1 as buildnode
 ########################
 FROM alpine/git as codecheckout
 WORKDIR /app
-RUN git clone https://github.com/siva094/nodejs-todo.git
+RUN git clone https://github.com/siva094/NodeJsToDostatic.git
 
 ######################
 #### Code Build #####
