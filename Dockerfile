@@ -1,4 +1,7 @@
-FROM siva094/node-scratch-fullystatic:1 as buildnode
+##########################################
+####  Image with only node exutable  #####
+##########################################
+FROM siva094/node-fullystatic:1 as buildnode
 
 #########################
 #### Source code  ########
