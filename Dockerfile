@@ -1,4 +1,4 @@
-FROM siva094/node-scratch-static:1 as buildnode
+FROM siva094/node-scratch-fullystatic:1 as buildnode
 
 #########################
 #### Source code  ########
@@ -19,7 +19,7 @@ RUN npm install --prod
 #### Target APP ###
 ##################
 FROM scratch
-COPY --from=buildnode /node/out/Release/node /node
+COPY --from=buildnode /node /node
 COPY --from=sourcecode /app ./
 ENV PATH "$PATH:/node"
 EXPOSE 3000
