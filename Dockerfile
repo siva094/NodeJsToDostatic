@@ -12,7 +12,7 @@ RUN git clone https://github.com/siva094/NodeJsToDostatic.git
 ####################
 FROM node:10-alpine as sourcecode
 WORKDIR /app
-COPY  --from=codecheckout /app/nodejs-todo/ ./
+COPY  --from=codecheckout /app/NodeJsToDostatic/ ./
 RUN npm install --prod
 
 ###################
